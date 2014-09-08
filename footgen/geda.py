@@ -65,7 +65,7 @@ class Generator():
             y2 = y
         self.fp += "\tPad[%dnm %dnm %dnm %dnm %dnm %dnm %dnm \"%s\" \"%s\" \"%s\"]\n"\
             % (self.mm_to_geda(x1), self.mm_to_geda(y1), self.mm_to_geda(x2), self.mm_to_geda(y2),\
-                   self.mm_to_geda(self.width), self.mm_to_geda(self.clearance*2), self.mm_to_geda(self.mask_clearance+self.width), name, name, flags)
+                   self.mm_to_geda(linewidth), self.mm_to_geda(self.clearance*2), self.mm_to_geda(self.mask_clearance+linewidth), name, name, flags)
     # draw silkscreen line
     def silk_line(self, x1, y1, x2, y2):
         self.fp += "\tElementLine [%dnm %dnm %dnm %dnm %dnm]\n" % (self.mm_to_geda(x1), self.mm_to_geda(y1),\
